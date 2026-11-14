@@ -1,16 +1,6 @@
 package com.esan.diarioespacial.data.local
 
 import androidx.room.Dao
-<<<<<<< HEAD
-import androidx.room.Query
-
-// Base común: el Alumno 1 lo completa.
-@Dao
-interface ApodDao {
-    @Query("SELECT COUNT(*) FROM apod")
-    suspend fun count(): Int
-}
-=======
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
@@ -45,4 +35,3 @@ interface ApodDao {
         insertAll(items.map { it.copy(isFavorite = it.date in favs) })
     }
 }
->>>>>>> dc043c597b94fec6cf778a705058c87309583524
